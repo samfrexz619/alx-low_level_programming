@@ -17,7 +17,7 @@ int main(void)
 		n2 = 48;
 		while (n2 < 58)
 		{
-			n3 =48;
+			n3 = 48;
 			while (n3 < 58)
 			{
 				if (n1 != n2 && n1 != n3 && n2 != n3 && n1 < n2 && n2 < n3)
