@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_alphabet - print alphabet in lowercase.
+ * print_alphabet_x10 - print alphabet in lowercase.
  *
 */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
 
