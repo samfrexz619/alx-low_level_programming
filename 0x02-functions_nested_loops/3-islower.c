@@ -9,7 +9,7 @@
  * Return: 1 for lowercase alphabets. 0 for the rest.
  */
 
-int is_lower(int c)
+int _islower(int c)
 {
 if (c >= 97 && c <= 122)
 	{
