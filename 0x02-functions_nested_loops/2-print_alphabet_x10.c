@@ -6,18 +6,22 @@
 */
 void print_alphabet_x10(void)
 {
-	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
+	/**
+	 * char alpha[] = "abcdefghijklmnopqrstuvwxyz";
+	*
+	*int index, size, j;
+	*
+	* size = sizeof(alpha) / sizeof(alpha[index]);
+	*/
 
-	int index, size, j;
-
-	size = sizeof(alpha) / sizeof(alpha[index]);
+	int index, j;
 
 	for (j = 0; j < 10; j++)
 	{
-		for (index = 0; index < size; index++)
+		for (index = 97; index < 122; index++)
 		{
 
-			_putchar(alpha[index]);
+			_putchar(index);
 		}
 		_putchar('\n');
 	}
