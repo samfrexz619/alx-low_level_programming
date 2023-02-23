@@ -18,11 +18,11 @@ void more_numbers(void)
 		while (index < 15)
 		{
 			if (index >= 10)
-				_putchar((index / 10) + 48);
-				_putchar((index % 10) + 48);
+			_putchar((index / 10) + 48);
+			_putchar((index % 10) + 48);
 
-				index++;
-			}
+			index++;
+		}
 		_putchar('\n');
 		count++;
 	}
