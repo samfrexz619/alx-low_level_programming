@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	int _strlen(char *s);
+	void _put(char *str);
 	return (0);
 }
