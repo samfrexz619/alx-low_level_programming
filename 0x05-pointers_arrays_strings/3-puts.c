@@ -8,10 +8,17 @@
  */
 void _puts(char *str)
 {
-	char arr[strlen(str) + 1];
+	nt count = 0;
 
-	strcpy(arr, str);
-
-	puts(arr);
+	while (count >= 0)
+	{
+		if (str[count] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		_putchar(str[count]);
+		count++;
+	}
 }
 
