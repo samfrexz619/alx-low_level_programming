@@ -26,9 +26,10 @@ void print_number(int n)
 	while (b > 9)
 	{
 		b /= 10;
-   		 len *= 10;
+		len *= 10;
 	}
 	for (; len >= 1; len /= 10)
 	{
 		_putchar(((i / len) % 10) + 48);
 	}
+}
