@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	for (index = 1; index < argc; index++)
 	{
-		for (b = 0; argv[index][j] != '\0'; b++)
+		for (b = 0; argv[index][b] != '\0'; b++)
 		{
 			if (!isdigit(argv[index][b]))
 			{
