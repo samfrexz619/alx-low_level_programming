@@ -1,1 +1,1 @@
-this is a task on static libraries
+this is a task on static library
