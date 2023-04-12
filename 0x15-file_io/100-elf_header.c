@@ -1,66 +1,21 @@
 #include "main.h"
-#include <stdlib.h>
+#include "print_magic.c"
+#include "print_data.c"
+#include "print_version.c"
+#include "utils.c"
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <elf.h>
-
-/**
- * print_version - prints version
- * @ptr: magic.
- * Return: nothing.
- */
-void print_version(char *ptr)
-{
-	int version = ptr[6];
-
-	printf("  Version:                           %d", version);
-
-	if (version == EV_CURRENT)
-		printf(" (current)");
-
-	printf("\n");
-}
-/**
- * print_data - prints data
- * @ptr: magic.
- * Return: nothing.
- */
-void print_data(char *ptr)
-{
-	char data = ptr[5];
-
-	printf("  Data:                              2's complement");
-	if (data == 1)
-		printf(", little endian\n");
-
-	if (data == 2)
-		printf(", big endian\n");
-}
-/**
- * print_magic - prints magic info.
- * @ptr: magic.
- * Return: nothing.
- */
-void print_magic(char *ptr)
-{
-	int bytes;
-
-	printf("  Magic:  ");
-
-	for (bytes = 0; bytes < 16; bytes++)
-		printf(" %02x", ptr[bytes]);
-
-	printf("\n");
-
-}
+#include "main.h"
 
 /**
  * check_sys - check the version system.
  * @ptr: magic.
- * Return: nothing.
+ * Return: no return.
  */
 void check_sys(char *ptr)
 {
@@ -102,7 +57,6 @@ int check_elf(char *ptr)
 
 	return (0);
 }
-
 /**
  * main - check the code.
  * @argc: number of arguments.
