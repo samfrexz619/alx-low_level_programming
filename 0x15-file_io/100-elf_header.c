@@ -1,7 +1,3 @@
-#include "main.h"
-#include "print_magic.c"
-#include "print_data.c"
-#include "print_version.c"
 #include "utils.c"
 #include <stdio.h>
 #include <stdlib.h>
