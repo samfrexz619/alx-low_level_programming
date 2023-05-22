@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * puts2 - prints one char out of 2 of a string.
+ * _puts - prints a string, followed by a new line.
  * @str: input string.
  * Return: no return.
  */
-void puts2(char *str)
+void _puts(char *str)
 {
 	int count = 0;
 
@@ -16,8 +16,8 @@ void puts2(char *str)
 			_putchar('\n');
 			break;
 		}
-		if (count % 2 == 0)
-			_putchar(str[count]);
+		_putchar(str[count]);
 		count++;
 	}
 }
+
