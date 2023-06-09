@@ -1,4 +1,4 @@
-#include "hash_taibles.h"
+#include "hash_tables.h"
 
 /**
  * add_hashN - adds a node at the beginning
