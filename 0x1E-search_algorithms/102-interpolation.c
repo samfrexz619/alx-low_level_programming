@@ -5,20 +5,46 @@
  * @array: input array
  * @size: array size
  * @value: value to search
- * Return: Always EXIT_SUCCESS
+ * Return: Index
  */
-int linear_search(int *array, size_t size, int value)
+int interpolation_search(int *array, size_t size, int value)
 {
-	int idx;
+	size_t pos, lw, high;
+	double fl;
 
 	if (array == NULL)
 		return (-1);
 
-	for (idx = 0; idx < (int)size; idx++)
+	lw = 0;
+	high = size - 1;
+
+	while (size)
 	{
-		printf("Value checked array[%u] = [%d]\n", idx, array[idx]);
-		if (value == array[idx])
-			return (idx);
+		fl = (double)(high - lw) / (array[high] - array[lw]) * (value - array[lw]);
+		pos = (size_t)(lw + fl);
+		printf("Value checked array[%d]", (int)pos);
+
+		if (pos >= size)
+		{
+			printf(" is out of range\n");
+			break;
+		}
+		else
+		{
+			printf(" = [%d]\n", array[pos]);
+		}
+
+		if (array[pos] == value)
+			return ((int)pos);
+
+		if (array[pos] < value)
+			lw = pos + 1;
+		else
+			high = pos - 1;
+
+		if (lw == high)
+			break;
 	}
+
 	return (-1);
 }
